@@ -1,0 +1,1187 @@
+/* --------------
+General and Global
+-----------------
+*/
+
+/* Fonts */
+
+@font-face {
+  font-family: SolaimanLipi;
+  src: url(../fonts/SolaimanLipi_22-02-2012.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: SolaimanLipi;
+  src: url(../fonts/SolaimanLipi_Bold_10-03-12.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    Roboto,
+    SolaimanLipi,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Liberation Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.body {
+  font-family:
+    Roboto,
+    SolaimanLipi,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Liberation Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  color: #333;
+}
+
+header,
+body > section,
+body > div,
+footer {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.container {
+  max-width: 1260px;
+  margin: auto;
+}
+
+/* Section Title */
+.section-title {
+  color: #333;
+  font-size: 39.0625px;
+  font-weight: 700;
+  line-height: 46.875px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Button */
+
+.btn-container {
+  padding: 32px 8px 0 8px;
+  text-align: center;
+}
+
+.btn {
+  font-size: 25px;
+  font-weight: 500;
+  color: #e2136e;
+  text-decoration: none;
+  padding: 8px 52px;
+  display: inline-block;
+  margin: 0 auto;
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.25);
+  border: solid 1px #e2136e;
+  border-radius: 800px;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #e2136e;
+}
+
+/* Cards */
+
+.cards {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  color: #333;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.24);
+}
+
+.card-image {
+  width: 100%;
+  height: 307.5px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+.card:hover .card-title {
+  color: #e2136e;
+}
+
+.card-info {
+  color: #6c757d;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 22.4px;
+  margin-top: auto;
+}
+
+.card-info-divider {
+  padding: 0 8px;
+}
+
+/* Live Chat */
+
+.live-chat-container {
+  display: inline-block;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+
+/* --------------
+Header
+-----------------
+*/
+
+.header {
+  color: #ffffff;
+  background-color: #e2136e;
+}
+.header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* logo */
+
+.logo {
+  display: inline-block;
+  color: #ffffff;
+  margin-right: 16px;
+}
+
+.logo svg {
+  width: 87px;
+}
+
+/* .header-menu {
+  display: flex;
+} */
+
+/* Navigation */
+.main-menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 22px 4px;
+}
+
+.main-menu .menu-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  line-height: 1.5;
+  padding: 0.25rem 0.5rem;
+}
+.main-menu .menu-link:hover {
+  background-color: #e8428b;
+}
+
+.main-menu .menu-item .active-link {
+  background-color: #e8428b;
+}
+
+/* Utility items */
+
+.utility-bar {
+  margin-left: auto;
+}
+
+.utility-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Search button */
+.search-button {
+  color: #ffffff;
+  background-color: transparent;
+  margin-right: 8px;
+  border: solid 1px #e2136e;
+}
+.utility-item {
+  color: #ffffff;
+}
+
+/* Language Switcher */
+
+.language-swithcer {
+  margin-left: 16px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.language-switch-link {
+  font-size: 16px;
+  color: #ffffff;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.language-switch-link:hover {
+  background-color: #d4548b;
+}
+
+/* Button */
+
+.utility-item .btn-app-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #e2136e;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  margin-left: 12px;
+}
+
+/* --------------
+Hero Section
+-----------------
+*/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+/* Slider Image */
+.hero-slider-img {
+  width: 100%;
+}
+
+.hero-slider-title {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.hero-silder-btn {
+  margin-bottom: 30px;
+}
+
+/* Hero slider Navigation */
+
+.hero-slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 50px;
+}
+
+.hero-slider-nav-btn {
+  margin: 0 10px;
+  background-color: transparent;
+  border-color: transparent;
+  color: #8d8d8d;
+}
+/* dots */
+
+ul.hero-slider-dot-nav {
+  list-style: none;
+  display: flex;
+}
+
+li.hero-slider-dot-nav {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #8d8d8d;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+li.hero-slider-dot-nav.active {
+  background-color: #e2136e;
+  border: 1px solid #e2136e;
+}
+
+/* --------------
+Services
+-----------------
+*/
+
+.services {
+  background-color: #fff0f6;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.services-heading {
+  color: #333;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-card {
+  color: #333;
+  background-color: #ffffff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - 192px) / 4);
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.services-card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.24);
+}
+.services-card .card-image {
+  width: 150px;
+  height: auto;
+}
+
+.services-card .card-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 24px 0 16px 0;
+}
+
+.services-card .card-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: center;
+}
+
+.card-link {
+  color: #e2136e;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 16px 0 24px 0;
+  margin-top: auto;
+}
+
+/* Qucik Features Title */
+.quick-features-title {
+  font-size: 25px;
+  font-weight: 700;
+  padding: 64px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.quick-features-title:after,
+.quick-features-title:before {
+  background-color: #dbdbdb;
+  content: " ";
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 51%;
+  width: 48%;
+}
+
+.quick-features-title:before {
+  margin-left: -50%;
+  text-align: right;
+}
+
+.quick-features-title:after {
+  margin-left: 2%;
+}
+
+/* Qucik Features Slider */
+
+.quick-features-slider {
+  display: flex;
+}
+
+.qf-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.qf-image {
+  width: 70px;
+}
+
+.qf-item {
+  text-align: center;
+}
+.qf-item h3 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+  padding-top: 32px;
+}
+.qf-item:hover {
+  cursor: pointer;
+}
+.qf-item:hover h3 {
+  color: #e2136e;
+}
+
+/* Quick Feature Slider Button */
+
+.qf-slider-btn {
+  display: none;
+}
+
+/* --------------
+App Promotion
+-----------------
+*/
+
+.app-promo {
+  position: relative;
+  padding-top: 64px;
+}
+
+/* Background Image */
+.app-promo-bg-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.app-promo .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text and Image container */
+.app-promo-texts,
+.app-promo-img-container {
+  width: 100%;
+  max-width: 526px;
+  padding: 0 12px;
+}
+
+/* Texts and links */
+
+.promo-title {
+  color: #e2136e;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 39.875px;
+  margin-bottom: 24px;
+}
+
+.promo-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.promo-link {
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+}
+
+.promo-link-1 {
+  margin-right: 16px;
+}
+
+/* Promo Image */
+
+.app-promo-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.app-promo-img {
+  width: 327px;
+}
+
+/* --------------
+Business Solution
+-----------------
+*/
+
+/* Title and text */
+.business-solutions {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.business-solutions .container {
+  max-width: 1286px;
+}
+
+.business-solutions-title {
+  font-size: 39.0625px;
+  font-weight: 700;
+  line-height: 46.875px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.business-solutions-text {
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Width */
+.business-cards,
+.business-image-container {
+  width: 50%;
+}
+
+/* Cards */
+.business-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.businsess-card {
+  width: calc((100% - 32px) / 3);
+  padding: 32px;
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.businsess-card:hover {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.24);
+}
+
+.business-solutions .row {
+  display: flex;
+}
+
+/* Card Image */
+.business-card-image {
+  width: 110px;
+}
+
+/* Card Title */
+.busines-card-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.businsess-card:hover .busines-card-title {
+  color: #e2136e;
+}
+
+/* Section Image */
+.business-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 65.5px;
+}
+.business-image {
+  width: 512px;
+  max-width: 100%;
+}
+
+/* --------------
+What's new
+-----------------
+*/
+
+.whats-new {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.whats-new-title {
+  font-size: 39.0625px;
+  font-weight: 700;
+  line-height: 46.875px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* --------------
+Nearest Points
+-----------------
+*/
+
+.nearest-point {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.nearest-point .container {
+  max-width: 1063.65px;
+}
+
+.nearest-point-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.nearest-point-item {
+  width: calc((100% - 16px) / 2);
+}
+
+.nearest-point-item {
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.nearest-point-item:hover {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.24);
+}
+
+.nearest-point-item-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  margin-bottom: 8px;
+}
+
+.nearest-point-item-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nearest-point-item img {
+  width: 284px;
+}
+
+/* --------------
+Home page Offers 
+-----------------
+*/
+.home-page-offers {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background: linear-gradient(#ffeff6, #fff);
+}
+.home-page-offers .container {
+  max-width: 1260px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-page-offers .offers {
+  width: 56.92%;
+}
+
+/* Offer Texts */
+
+.home-page-offers .text-headings {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.offer-heading {
+  text-align: left;
+}
+
+.offer-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 48px;
+}
+
+.offer-btn {
+  margin: 0;
+}
+
+/* Offer cards */
+.offers {
+  display: flex;
+  gap: 16px 8px;
+  flex-wrap: wrap;
+}
+.offer-card {
+  text-decoration: none;
+  color: #333;
+  background-color: #ffffff;
+  width: calc((100% - 8px) / 2);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.16);
+}
+
+.offer-card:hover {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.24);
+}
+
+.offer-image {
+  width: 100%;
+}
+
+.offer-card-contents {
+  padding: 16px;
+}
+
+.offer-card-heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+}
+
+.offer-card:hover .offer-card-heading {
+  color: #e2136e;
+}
+
+.offer-card-text {
+  color: #6c757d;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.offer-card-1 {
+  width: 100%;
+}
+
+.offer-image {
+  width: 100%;
+}
+
+/* --------------
+Secure Experience 
+-----------------
+*/
+
+.secure-experience {
+  padding-top: 48px;
+  padding-bottom: 64px;
+  background: linear-gradient(#fff, #ffeff6);
+}
+
+.secure-experience .container {
+  max-width: 1155px;
+}
+
+.secure-experience-contents {
+  display: flex;
+}
+
+/* Colums */
+.content-col {
+  width: calc(100% / 3);
+}
+
+.sec {
+  min-height: 317px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sec-heading {
+  color: #e2136e;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+.content-col-1 {
+  text-align: right;
+}
+.sec-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+/* Dot */
+.sec-dot {
+  height: 20px;
+  width: 20px;
+  background-color: #e2136e;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin: 0 32px;
+}
+
+.content-col-1 {
+  text-align: right;
+}
+
+.content-col-2 {
+  text-align: center;
+}
+
+.content-col-3 .sec {
+  flex-direction: row-reverse;
+}
+
+/* --------------
+Footer
+-----------------
+*/
+
+.footer {
+  color: #ffffff;
+  background-color: #1e1e1e;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* Footer Top */
+
+.footer-top-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  padding-top: 8px;
+}
+
+.footer-top-heading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-top: 32px;
+  margin-bottom: 16px;
+}
+
+/* Footer Main */
+
+.footer-links-all-container {
+  padding-top: 48px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* links */
+.flc {
+  width: calc(100% / 5);
+}
+
+.flc-heading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.flc-5 .certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Certification Image */
+
+.certification-image {
+  width: calc((100% - 16px) / 2);
+  margin-top: 20px;
+  display: block;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+/* ********************** */
+/* ********************** */
+/* Campaign Page */
+/* ********************** */
+/* ********************** */
+
+/* 
+-----------------
+Find Offer
+-----------------
+*/
+
+.find-offers {
+  padding-top: 64px;
+  background: linear-gradient(#ffeff6, #fff);
+}
+.find-offers .container .fo-search-area {
+  max-width: 849.5px;
+  margin: auto;
+}
+
+/* Search bar */
+.search-form {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+#search-bar {
+  font-size: 16px;
+  background-color: #fff;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+  padding: 0 16px;
+  border: 1px solid #dbdbdb;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+.search-form button svg {
+  color: #e2136e;
+}
+
+/* Search Suggestions */
+.search-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.search-suggestion-items:nth-child(1) {
+  margin-right: 8px;
+}
+
+.search-suggestion-link {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 4px 24px;
+  border: solid 1px #d8d8d8;
+  border-radius: 100px;
+}
+
+.find-offers .home-page-offers {
+  background: none;
+}
+/* ********************** */
+/* ********************** */
+/* Career Page */
+/* ********************** */
+/* ********************** */
+
+/* 
+-----------------
+Career Banner
+-----------------
+*/
+
+.career-banner {
+  padding: 0;
+  min-height: 0;
+}
+.career-banner-image {
+  width: 100%;
+  display: block;
+}
+
+/* 
+-----------------
+Career at Bkash
+-----------------
+*/
+
+.career-at-bkash {
+  background-color: #ffeff6;
+}
+
+.career-at-bkash .container {
+  max-width: 952.5px;
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+}
+
+/* Image */
+.career-at-bkash-image-wrapper {
+  width: 41.99%;
+}
+
+.career-at-bkash-image {
+  width: 100%;
+  display: block;
+}
+
+/* Text & Links */
+
+.career-at-bkash-texts {
+  width: 51.29%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.career-at-bkash-heading {
+  text-align: left;
+  margin-bottom: 8px;
+}
+.career-at-bkash-para {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-bottom: 24px;
+}
+
+/* 
+-----------------
+Follow bkash career
+-----------------
+*/
+
+.follow-bkash-career {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.follow-bkash-career .container {
+  max-width: 952.5px;
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+}
+
+/* Text & Links */
+
+.follow-bkash-career-texts {
+  width: 51.29%;
+}
+
+.follow-bkash-career-heading {
+  text-align: left;
+  margin-bottom: 8px;
+}
+.follow-bkash-career-para {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-bottom: 32px;
+}
+
+.fbc-social-links {
+  display: flex;
+  gap: 48px;
+}
+
+.fbc-sl img {
+  width: 60px;
+}
+
+/* Image */
+.follow-bkash-career-image-wrapper {
+  width: 41.99%;
+}
+
+.follow-bkash-career-image {
+  width: 100%;
+  display: block;
+}
+
+/* 
+-----------------
+Career at Bkash
+-----------------
+*/
+
+.life-at-bkash {
+  background-color: #ffeff6;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
